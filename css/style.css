@@ -1,0 +1,111 @@
+/*
+---------------------------------------------
+Variables
+---------------------------------------------
+*/
+:root {
+  --body-font: "Poppins", sans-serif;
+  --main-padding: 40px;
+}
+/*
+---------------------------------------------
+Global Rule
+--------------------------------------------- 
+*/
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* The X-Small Screens */
+@media (max-width: 576px) {
+  .container {
+    width: 100%;
+  }
+}
+/* The Small Screens */
+@media (min-width: 576px) {
+  .container {
+    width: 540px;
+  }
+}
+/* The Medium Screens */
+@media (min-width: 768px) {
+  .container {
+    width: 720px;
+  }
+}
+/* The Large Screens */
+@media (min-width: 992px) {
+  .container {
+    width: 960px;
+  }
+}
+/* The X-Large Screens */
+@media (min-width: 1200px) {
+  .container {
+    width: 1140px;
+  }
+}
+/* The XX-Large Screens */
+@media (min-width: 1400px) {
+  .container {
+    width: 1320px;
+  }
+}
+/*
+---------------------------------------------
+The Header
+---------------------------------------------
+*/
+header .container {
+  padding: calc(var(--main-padding) / 2);
+}
+header .container #title {
+  text-align: center;
+}
+/*
+---------------------------------------------
+The Menu
+---------------------------------------------
+*/
+.menu .container {
+  padding: var(--main-padding);
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+}
+.menu .container article {
+  background-color: hsl(0, 0%, 75%);
+  border: 2px solid hsl(0, 0%, 0%);
+  padding: 10px;
+  padding-top: 60px;
+  position: relative;
+}
+.menu .container article .title {
+  border: 2px solid hsl(0, 0%, 0%);
+  font-weight: bold;
+  text-align: right;
+  padding: 10px 30px;
+  position: absolute;
+  top: -2px;
+  right: -2px;
+}
+.menu .container .chicken .title {
+  background-color: hsl(2, 43%, 71%);
+}
+.menu .container .beef .title {
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(1, 50%, 51%);
+}
+.menu .container .sushi .title {
+  background-color: hsl(44, 61%, 75%);
+}
